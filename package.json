@@ -1,0 +1,28 @@
+{
+  "name": "@squdward/eslint",
+  "version": "1.0.0",
+  "description": "My own Eslitn config",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eslint",
+    "config",
+    "share"
+  ],
+  "author": "Ilya Politik",
+  "license": "ISC",
+  "devDependencies": {},
+  "peerDependencies": {
+    "eslint": "^8.57.0"
+  },
+  "dependencies": {
+    "eslint-plugin-react": "^7.34.1",
+    "globals": "^15.0.0",
+    "typescript-eslint": "^7.7.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-promise": "^6.1.1"
+  }
+}
