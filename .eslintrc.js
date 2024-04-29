@@ -9,9 +9,12 @@ module.exports = {
     "airbnb/hooks",
     "plugin:eslint-comments/recommended",
     "plugin:promise/recommended",
+    "plugin:prettier/recommended",
   ],
+  plugins: ["prettier"],
   rules: {
     quotes: ["warn", "double"],
     "promise/prefer-await-to-then": "warn",
+    "react/function-component-definition": "off",
   },
 };
