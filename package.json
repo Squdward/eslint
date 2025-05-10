@@ -1,6 +1,6 @@
 {
   "name": "@squdward/eslint",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "My own Eslint config",
   "main": "index.js",
   "type": "module",
