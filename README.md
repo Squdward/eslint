@@ -71,10 +71,10 @@ export default [...squdwardConfig,
 Создайте файл `.prettierrc.js` в корне вашего проекта:
 
 ```js
-import squdwardPrettierConfig from '@squdward/eslint/prettier';
+import { prettierConfig } from '@squdward/eslint';
 
 export default {
-  ...squdwardPrettierConfig,
+  ...prettierConfig,
   
   // Пользовательские переопределения...
   // semi: false,
@@ -86,10 +86,11 @@ export default {
 Создайте файл `stylelint.config.js` в корне вашего проекта:
 
 ```js
-import squdwardStylelintConfig from "@squdward/eslint/stylelint";
+import { stylelintConfig } from '@squdward/eslint';
+
 
 export default {
-  ...squdwardStylelintConfig,
+  ...stylelintConfig,
   
   // Пользовательские настройки...
 };
@@ -132,10 +133,12 @@ export default {
 ### ESLint
 
 ```js
-import squdwardConfig from "@squdward/eslint";
+import baseConfig, { reactConfig, typescriptConfig } from '@squdward/eslint';
 
 export default [
-  ...squdwardConfig,
+  ...baseConfig
+  ...typescriptConfig,
+  ...reactConfig,
   {
     rules: {
       // Ваши правила...
@@ -148,10 +151,10 @@ export default [
 ### Prettier
 
 ```js
-import squdwardPrettierConfig from '@squdward/eslint/prettier';
+import { prettierConfig } from '@squdward/eslint';
 
 export default {
-  ...squdwardPrettierConfig,
+  ...prettierConfig,
   printWidth: 100,
   // Другие настройки...
 };
@@ -160,10 +163,11 @@ export default {
 ### Stylelint
 
 ```js
-import squdwardStylelintConfig from "@squdward/eslint/stylelint";
+import { stylelintConfig } from '@squdward/eslint';
+
 
 export default {
-  ...squdwardStylelintConfig,
+  ...stylelintConfig,
   rules: {
     // Ваши правила...
     'color-no-invalid-hex': true,
