@@ -3,17 +3,14 @@ import tseslint from "typescript-eslint";
 export default tseslint.config(
   // Рекомендуемые настройки TS
   ...tseslint.configs.recommended,
-
   {
+    files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
       parserOptions: {
         project: ["./tsconfig.json", "./tsconfig.*.json"],
         tsconfigRootDir: process.cwd(),
       },
     },
-  },
-
-  {
     rules: {
       "@typescript-eslint/no-floating-promises": "error",
       "@typescript-eslint/no-misused-promises": "error",
@@ -25,5 +22,5 @@ export default tseslint.config(
       "@typescript-eslint/explicit-function-return-type": "warn",
       "@typescript-eslint/prefer-readonly": "warn",
     },
-  },
+  }
 );
