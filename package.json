@@ -1,6 +1,6 @@
 {
   "name": "@squdward/eslint",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "My own Eslint config",
   "main": "index.js",
   "type": "module",
@@ -30,11 +30,25 @@
   "author": "Ilya Politik",
   "license": "ISC",
   "exports": {
-    ".": "./index.js",
-    "./prettier": "./prettier.js",
-    "./stylelint": "./stylelint.js",
-    "./configs/react": "./configs/react.js",
-    "./configs/typescript": "./configs/typescript.js"
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    },
+    "./prettier": {
+      "import": "./prettier.js"
+    },
+    "./stylelint": {
+      "import": "./stylelint.js"
+    },
+    "./configs/react": {
+      "import": "./configs/react.js"
+    },
+    "./configs/typescript": {
+      "import": "./configs/typescript.js"
+    },
+    "./main": {
+      "import": "./main.js"
+    }
   },
   "dependencies": {
     "@eslint/js": "^9.26.0",
@@ -52,6 +66,15 @@
     "stylelint-scss": "^6.11.1",
     "typescript-eslint": "^8.32.0"
   },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "main.config.js",
+    "prettier.js",
+    "stylelint.js",
+    "configs/react.js",
+    "configs/typescript.js"
+  ],
   "peerDependencies": {
     "eslint": ">=9.26.0",
     "prettier": ">=3.5.3",

@@ -1,20 +1,15 @@
-import { defineConfig } from "eslint/config";
-import eslint from "@eslint/js";
-import prettierPlugin from "eslint-plugin-prettier";
-import prettierConfig from "eslint-config-prettier";
+import mainConfig from "./main.config.js";
+import reactConfig from "./configs/react.js";
+import typescriptConfig from "./configs/typescript.js";
+import prettierConfig from "./prettier.js";
+import stylelintConfig from "./stylelint.js";
 
-export default defineConfig([
-	// Базовые настройки Eslint JS
-	eslint.configs.recommended,
+export {
+  mainConfig,
+  reactConfig,
+  typescriptConfig,
+  prettierConfig,
+  stylelintConfig,
+};
 
-	// Подключение правил Prettier через плагин
-	{
-		plugins: {
-			prettier: prettierPlugin,
-		},
-		rules: {
-			"prettier/prettier": "error",
-			...prettierConfig.rules,
-		},
-	},
-]);
+export default mainConfig;
