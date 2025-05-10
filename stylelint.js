@@ -6,4 +6,7 @@ export default {
     "stylelint-config-recess-order",
   ],
   plugins: ["stylelint-order", "stylelint-scss"],
+  rules: {
+    "selector-class-pattern": null,
+  },
 };
