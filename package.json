@@ -30,11 +30,25 @@
   "author": "Ilya Politik",
   "license": "ISC",
   "exports": {
-    ".": "./index.js",
-    "./prettier": "./prettier.js",
-    "./stylelint": "./stylelint.js",
-    "./configs/react": "./configs/react.js",
-    "./configs/typescript": "./configs/typescript.js"
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    },
+    "./prettier": {
+      "import": "./prettier.js"
+    },
+    "./stylelint": {
+      "import": "./stylelint.js"
+    },
+    "./configs/react": {
+      "import": "./configs/react.js"
+    },
+    "./configs/typescript": {
+      "import": "./configs/typescript.js"
+    },
+    "./configs/main": {
+      "import": "./configs/main.js"
+    }
   },
   "dependencies": {
     "@eslint/js": "^9.26.0",
@@ -52,6 +66,14 @@
     "stylelint-scss": "^6.11.1",
     "typescript-eslint": "^8.32.0"
   },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "prettier.js",
+    "stylelint.js",
+    "configs/react.js",
+    "configs/typescript.js"
+  ],
   "peerDependencies": {
     "eslint": ">=9.26.0",
     "prettier": ">=3.5.3",
